@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+  <title>Creá un curso</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/editar.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" media="screen and (min-width: 769px)" href="/css/editar.css"/>
+  <link rel="stylesheet" media="screen and (min-width: 1169px)" href="/css/editar.css"/>
+
+</head>
+
+<body class="body">
+  <header>
+    <div class="header">
+      <div class="caja-logo">
+        <a href="/" ><div> <img src="/img/logo.jpg" alt="Logo de la empresa" class="logo"></div></a>
+      </div>
+    </div>
+
+
+
+  </header>
+
+
+
+
+
+
+  <div class="body-background">
+
+    <div class="caja-formulario">
+      <i class="menu-icon"> <a href="/cursos" style="text-decoration: none"><i class="fa-solid fa-xmark"></i> </i> </a>
+      <h3 class="Crea-cuenta"> ¡Cargá un nuevo curso!</h3>
+      <div class="icono-titulo">
+
+        <div class="errores" style="color: red">
+          <ul></ul>
+
+        </div>
+
+
+        <i class="icono"> <i class="fa-regular fa-pen-to-square"></i> </i>
+        <div class="titulo"> Comenzamos con una breve descripción </div>
+      </div>
+
+      <form action="/producto/crear" method="POST" id="formulario" class="" enctype="multipart/form-data">
+
+        <div class="campos1">
+          <div class="primera-parte">
+            <label for="nombre" class="form-label"> </label>
+            <input type="text" name="nombreCurso" id="nombreCurso" placeholder="Nombre del curso" class="campo">
+            <label for="descripcion" class="form-label"> </label>
+            <textarea type="text" name="descripcion" id="descripcionCurso" placeholder="Descripción"
+              class="campo"></textarea>
+          </div>
+          <div class="campos3">
+            <i class="icono"> <i class="fa-solid fa-arrow-pointer"></i> </i>
+            <label class="titulo"> Tipo de curso: </label>
+            <select name="tipoCurso" class="menu-desplegable">
+              <% for (let tc of tipoCurso) { %>
+                <option value="<%= tc.idTipoCurso %>">
+                  <%= tc.nombre %>
+                </option>
+                <% } %>
+            </select>
+          </div>
+          <div class="icono-titulo">
+            <i class="icono"> <i class="fa-sharp fa-solid fa-image"></i> </i>
+            <div class="titulo"> Seleccioná la imagen del curso </div>
+          </div>
+
+          <div class="botonfoto">
+            <label for="files" class="btn"></label> <!-- Seleccioná un archivo jpg</label>-->
+            <input id="crearCargaImagen" type="file" name="crearCargaImagen" id="crearCargaImagen"
+              class="crearCargaImagen"></input> <!-- style="visibility:hidden;" -->
+            <!--</button>-->
+          </div>
+
+          <div class="icono-titulo">
+
+
+            <i class="icono"><i class="fas fa-chalkboard-teacher"></i></i>
+            <div class="titulo"> Próxima comisión </div>
+          </div>
+          <div class="campos2">
+            <div>
+              <label for="fechaInicioCurso" id="fechaInicioCurso" class="form-label"> ¿Cuándo comienza? </label>
+              <input type="date" name="fechaInicioCurso" id="fechaInicioCurso" placeholder="Fecha de inicio"
+                class="campo">
+            </div>
+            <div>
+              <div class="precio2">
+                <label for="precio" class="form-label"> Precio </label>
+                <input type="text" name="precio" id="precioCurso" placeholder="0" class="campo">
+              </div>
+            </div>
+            <div>
+              <label for="vacantesTotales" class="form-label"> Vacantes totales </label>
+              <input type="text" name="vacantesTotales" id="vacantesTotales" placeholder="0"
+                class="campo vacantesTotales">
+            </div>
+            <div>
+              <label for="idAdmin" class="form-label"> ¿Quién carga el curso? </label>
+              <input type="text" name="idAdmin" id="idAdmin" placeholder="Insertar el número 1" class="campo"> </input>
+            </div>
+
+            <button type="submit" class="boton"> <a style="text-decoration: none"> Guardar cambios</button></a>
+            <button type="reset" class="resetear"> Borrar cambios</button>
+          </div>
+      </form>
+    </div>
+
+  </div>
+
+
+  <script src="/js/crear.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6d9e623f2f.js" crossorigin="anonymous"> </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/cursos.css">
+    <link rel="stylesheet" media="screen and (min-width: 637px)" href="/css/cursos.css" />
+    <link rel="stylesheet" media="screen and (min-width: 889px)" href="/css/cursos.css" />
+    <title> Tidy Code | Producto </title>
+</head>
+
+<body class="body">
+    <header>
+        <%- include('partials/header') %>
+      
+    </header>
+    
+
+    <main>
+
+<!-- Banner-->
+<div class="contenedor-banner"> 
+<div class="banner"> <img src="/img/cursosbanner.png" alt="Logo de la empresa" class="banner-sub"> </div>
+</div>
+
+ <!-- EDITAR -->
+ <div class="contenedor-editar">
+    <a href="/producto/crear" ><img class="editar" src="../../img/agregar.png" alt=""> </a>
+    </div>
+
+<!-- NOS RECOMIENDAN -->
+
+<div class="block-recomiendan">
+    <div class="block-recomiendan-texto"> 
+        <div class="recomiendan-titulo"> 
+            Aprendizaje 360°
+        </div>
+        <div class="recomiendan-quote">  <!-- DINAMICO -->
+            Creamos soluciones pensando en lo que necesitás
+        </div>
+        <div class="recomiendan-logo">  <!-- DINAMICO -->
+            </div>
+         <div class="recomiendan-texto"> 
+            Te acompañamos en cada etapa, escuchamos, entendemos, y afrontamos los retos que vengan con soluciones pensadas en lo que tus equipos necesitan. </div>
+
+
+    </div>
+    
+    <div class="block-recomiendan-imagen">
+
+        <img class="imagen-recomiendan" src="img/cursos.png" alt=""> 
+        
+
+    </div>
+        
+
+
+    </div>
+<!-- cursos -->
+    <div class="fechas-block">
+        <div class="base"> </div>
+        <div class="fechas-todo-texto"> 
+        <div class="fechas-titulo">Conocé nuestros cursos</div>
+        <div class="cursos-block"> 
+            <% for (let c of curso) { %>    
+        <div class="curso-1"> 
+            
+        <div class="blanco"> </div>  
+             
+        <div class="fechas-block-cuadrado">
+            
+            <div class="contenedor-imagen-cursos"> 
+            <img class="imagen-fullstack" src="../img/<%= c.imagen %>" alt="">
+        </div>
+            <div class="texto-fechas"> 
+            <div class="fecha"> <%= c.nombre %> </div>  <!-- DINÁMICO -->
+            <div class="fecha-subtitulos-pequeños"><%= c.descripcion %> </div> 
+            </div>
+        <a href="/producto/detalle/<%= c.idCurso %>"> <button type="button" class="fechas-reserva" style="cursor: pointer">Ver curso</button> </a>
+         
+        </div>
+        <div class="base"> </div>        
+        
+    </div>           
+    <% } %> 
+</div>
+</div>
+
+</div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <%- include('partials/footer') %>
+    </footer>
+</main>
+</body>

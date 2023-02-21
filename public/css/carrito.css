@@ -1,0 +1,495 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    margin-right: 0%;
+
+   
+   
+
+}
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+body{
+    
+    font-family:  'DM Sans', sans-serif;
+    margin: 0px;
+  
+}
+
+
+
+
+
+/* HEADER */
+
+
+.header{
+    background-color:#6F50F8;
+    padding:22px;
+    display: absolute;
+    height: 60px;
+   
+ 
+    
+    
+    
+    }
+
+
+.caja-logo{
+        width:100%;
+        flex-grow: 1;        
+        display: flex; 
+    
+        
+       
+      
+    
+    }
+
+.contenedor-logo{
+        width:20%;
+    }
+
+.logo-black{
+        display: none;
+    }
+    
+.logo{
+        width:100px;
+        margin-left: 15%;
+        position: inline
+    }
+
+.contenedor-boton{
+    position: inline;
+    text-align: right;
+    width: 65%
+}
+
+.boton-menu{
+    color: white;
+    position: inline;
+    margin-top: 2%;
+    
+   
+   
+}
+
+.iniciar-boton{
+    display:none
+}
+
+.regitrate-boton{
+    display:none
+}
+
+.cursos-menu{
+    display:none
+}
+
+
+.contenedor-editar{
+  
+    display:none;
+    
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 5%;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    text-align: left;
+    border-radius: 4px;
+    
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+
+
+/* CARRITO */
+
+.contenedor-carrito {
+    width: 80%;
+    box-sizing: border-box;
+    margin-top: 25px; 
+    background-color: #f2f2f2;
+    padding-bottom: 20px;
+    margin-top: 50px
+}
+
+.p{font-size: 20px;}
+
+/* MEDIOS DE PAGO */
+
+.mensaje-de-pago {
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15%
+}
+
+.medios-de-pago {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 25px;
+    width: 90%;
+    padding: 5px 0 5px 0;
+    background-color: white;
+}
+
+.logo-visa {
+    width: 15%;
+    margin-left: 30px;
+    padding: 10px 0 10px 0;
+}
+
+
+.logo-mastercard {
+    width: 15%;
+    height: 100%;
+    margin-left: 30px;
+}
+
+.logo-mercadopago {
+    width: 15%;
+    margin-left: 30px;
+    padding: 8px 0 8px 0;
+}
+
+.mensaje-transferencia {
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 30px;
+    padding: 15px 0 10px 0;
+}
+
+
+.input-radio {
+    width: 5%;
+}
+
+/* PRODUCTO */
+.nombreCursoEnCarrito{
+    font-size: 18px;
+    margin-left: 5%
+}
+
+.precioCursoEnCarrito{
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 5%
+}
+
+.boton-vaciar{
+    background-color: grey;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-left: 10%
+}
+
+.contenedor-curso {
+    width: 80%;
+    background-color: white;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-left: 3vw;
+    border-radius: 5px;
+}
+
+.imagen-carrito{
+    width: 60%;
+    margin-left: 20%
+}
+.contenedor-producto {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.imagen-curso {
+    width: 75%
+}
+
+.boton-pagar {
+    background-color: #6f50f8
+}
+
+.contenedor-precio{
+    width: 95%;
+}
+
+.precio {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.precio-2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold
+}
+
+/* FOOTER */
+.footer{
+    background-color: #333333;
+    margin-top: 50px;
+}
+
+.links{
+    margin-left: 37px;
+    text-align: left;
+}
+
+.links-utiles{
+    color: white;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.basefooter{
+    background-color:#333333;
+    height: 35px;
+   
+}
+.items-footer{
+    color: white;
+    margin-top: 12px;
+}
+
+.todos-los-links{
+    color: white;
+    text-decoration: none; 
+    font-size: 12px;
+  
+}
+
+.linea{
+    border-top: 1px solid white;
+    margin-top: 20px;
+    margin-right: 5%;
+}
+.footer-2022{
+    color: white;
+    font-size: 9px;
+    margin-top: 20px;
+    
+    
+}
+
+@media only screen and (min-width: 637px) {
+
+
+    /* HEADER */
+    
+    
+    
+    .header{
+        background-color:white;
+        padding:22px;
+        display: absolute;
+        height: 50px;
+       
+     
+        
+        
+        
+        }
+    
+    
+    .caja-logo{
+            width:100%;
+            flex-grow: 1;
+           
+            
+           
+          
+        
+        }
+    .contenedor-logo{
+    width:20%;
+    }
+    
+    .logo{
+    display: none;
+    }        
+    
+    
+    .logo-black{ display: inline;
+            width:120px;
+            margin-left: 11%;
+            position: inline
+        }
+    
+    
+    
+    .contenedor-boton{         
+       width: 80%;
+        }
+    
+    
+    .boton-menu{
+        display: none;       
+        
+       
+    }
+    
+    .cursos-menu{
+        display:inline;
+        font-size: 12px;
+        font-weight: 600;
+        margin-right: 30px;
+        font-style: normal;
+        text-decoration: none;
+    }
+    
+    .iniciar-boton{
+        display:inline;
+        margin:0px;
+        background-color: #6F50F8;
+       
+        padding: 8px;
+        border-radius: 6px ;
+        border: #6F50F8 solid 2px; 
+        font-size: 12px;
+        width:100px; 
+        margin-top: 5px ;
+        font-weight: bold;
+        margin-right: 10px;
+        text-decoration: none; 
+        color: white;
+    }
+    
+    .regitrate-boton{
+        display:inline;
+        margin:0px;
+        background-color: white ;
+        color: #6F50F8 ;
+        padding: 8px;
+        border-radius: 6px ;
+        border: #6F50F8 solid 2px; 
+        font-size: 12px;
+        width:100px; 
+        margin-top: 5px ;
+        font-weight: bold;
+        margin-right: 10px;
+        text-decoration: none; 
+    }
+}
+
+    @media only screen and (min-width: 889px) {
+
+        /* HEADER */
+    
+       
+        .contenedor-editar{
+            display: inline;
+            position: fixed;    
+            margin-left:92%;
+            
+        }
+    
+        .editar{
+            width: 60px;
+            text-align: right;    
+            
+           
+        }
+    
+       
+    
+    /* EMPLEADORES RECOMIENDAN */
+    
+    .block-recomiendan{
+        margin: 80px;
+        margin-top: 7%;
+        margin-left: 100px;
+        display: flex;
+       
+    }
+    
+    .block-recomiendan-texto{
+        margin-left: 80px;
+        
+     
+       
+    }
+    
+    
+    .recomiendan-titulo{
+        font-size: 15px;
+        font-weight: bold;
+        color:#6F50F8;
+    }
+    
+    .recomiendan-quote{
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 20px;
+        line-height:35px;    
+        color: #333333 ;
+        width: 450px;
+        
+    }
+    
+    .imagen-logo{
+        width: 100px;
+        margin-top: 18px;
+    }
+    
+    .recomiendan-texto{
+        font-size: 14px;
+        margin-top: 18px;
+        line-height:20px;
+        margin-right: 100px;
+        width: 300px;
+      
+        
+    }
+    
+    .imagen-recomiendan{
+        width: 350px;
+        margin-top: -70px;
+        margin-left: 150px;
+        
+    }
+    
+    
+      }   
